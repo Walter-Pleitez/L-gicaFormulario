@@ -1,6 +1,8 @@
 package outlook.walter.abstracta.form.validador;
 
-public class LargoValidador extends Validador{
+import outlook.walter.abstracta.form.validador.mensaje.IMensajeFormateable;
+
+public class LargoValidador extends Validador implements IMensajeFormateable{
     protected String mensaje = "Minimo de caracteres del campo d% y Maximo %d";
     private int min;
     private int max = Integer.MAX_VALUE;
@@ -48,5 +50,10 @@ public class LargoValidador extends Validador{
         int largo = valor.length();
 
         return (largo >= min && largo <= max);
+    }
+
+    @Override
+    public String getMensajeFormateable(String campo) {
+        return null;
     }
 }
