@@ -37,5 +37,10 @@ abstract public class ElementoForm {
         }
         return this.errores.isEmpty();
     }
+
+    public List<String> getErrores() {
+        return errores;
+    }
+
     abstract public String dibujarHTML();
 }
